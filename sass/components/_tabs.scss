@@ -1,0 +1,87 @@
+/**
+ * Tabs
+ */
+ .tabs {
+  padding-top: 1rem;
+	display: flex;
+  flex-wrap: wrap; // make sure it wraps
+  box-shadow: 0 1rem 1rem rgba($color-black,.2);
+}
+.tabs label {
+	order: 1; // Put the labels first
+	display: block;
+	padding: 1rem 2rem;
+	margin-right: 0.2rem;
+  cursor: pointer;
+  font-size: $default-font-size;;
+  background: $color-primary;
+  color: $color-secondary;
+  font-weight: bold;
+  transition: background ease 0.2s;
+  text-transform: uppercase;
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba($color-black,.2);
+
+    &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+    }
+}
+}
+.tabs .tab {
+  order: 99; // Put the tabs last
+  flex-grow: 1;
+	width: 100%;
+	display: none;
+  padding: 1rem;
+  background: #fff;
+  ul {
+    height: 20rem;
+    overflow: auto;
+    animation: moveInLeft .5s ease-out .25s;
+    animation-fill-mode: backwards;
+    list-style: none;
+    padding: 0;
+    // padding-left: 2rem;
+    font-size: $default-font-size;
+    li {
+      padding-left: 2rem;
+      &:before {
+        content: "\2192"; 
+        display: inline-block;
+        margin-left: -1.3em; 
+        width: 1.3em;
+      }
+    }
+  }
+  .position-time {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    font-style: italic;
+  }
+}
+.tabs input[type="radio"] {
+	display: none;
+}
+.tabs input[type="radio"]:checked + label {
+  background: #fff;
+  color: $color-grey-dark;
+  text-decoration: none;
+  border-bottom: .5rem solid $color-tertiary;
+}
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+@media (max-width: 45em) {
+  .tabs .tab,
+  .tabs label {
+    order: initial;
+  }
+  .tabs label {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 0.2rem;
+  }
+}
