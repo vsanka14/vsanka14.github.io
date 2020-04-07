@@ -189,15 +189,15 @@ body {
 .loading {
   height: 0;
   width: 0;
-  padding: 15px;
-  border: 6px solid #ccc;
-  border-right-color: #888;
-  border-radius: 22px;
-  -webkit-animation: rotate 1s infinite linear;
-  /* left, top and position just for the demo! */
+  padding: 1.5rem;
+  border: 0.6rem solid #8A586E;
+  border-right-color: #BD7897;
+  border-radius: 2.2rem;
+  animation: rotate 1s infinite linear;
   position: absolute;
   left: 50%;
-  top: 50%; }
+  top: 50%;
+  z-index: 1; }
 
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -465,6 +465,7 @@ body {
     display: table-cell; }
   .popup__img {
     display: block;
+    visibility: hidden;
     width: 100%; }
   .popup__text {
     font-size: 1.4rem;
@@ -724,8 +725,8 @@ body {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 3.5rem;
-    filter: invert(74%) sepia(4%) saturate(3621%) hue-rotate(356deg) brightness(88%) contrast(84%); }
+    height: 4rem;
+    filter: invert(67%) sepia(44%) saturate(331%) hue-rotate(356deg) brightness(88%) contrast(90%); }
   .header__text-box {
     position: absolute;
     top: 40%;
