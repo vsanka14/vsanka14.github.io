@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(event) { 
+document.addEventListener("DOMContentLoaded", function() { 
     document.getElementById('loader').style.display = 'none';
-    document.getElementsByClassName('popup__img').forEach(element=>{
-        element.style.visibility = 'visible';
-    });
+    let popupImgs = document.getElementsByClassName('popup__img');
+    for(let i=0; i<popupImgs.length; i++) {
+        popupImgs[i].style.visibility = 'visible';
+    }
 });
