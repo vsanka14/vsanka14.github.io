@@ -578,7 +578,7 @@ body {
   padding: 1rem;
   background: #fff; }
   .tabs .tab ul {
-    height: 20rem;
+    height: 25rem;
     overflow: auto;
     animation: moveInLeft .5s ease-out .25s;
     animation-fill-mode: backwards;
