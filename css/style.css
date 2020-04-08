@@ -254,6 +254,8 @@ body {
   transition: all .4s; }
 
 .btn--animated {
+  z-index: 1;
+  font-weight: 500;
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
 
@@ -303,6 +305,8 @@ body {
         background-image: linear-gradient(to right bottom, #5A5062, #160B1E); }
       .card__side--back-3 {
         background-image: linear-gradient(to right bottom, #CF9CB3, #8A586E); }
+      .card__side--back-4 {
+        background-image: linear-gradient(to right bottom, #C55456, #810F11); }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
   .card:hover .card__side--back {
@@ -321,6 +325,8 @@ body {
       background-image: linear-gradient(to right bottom, #5A5062, #160B1E), url(../img/wordstream.png); }
     .card__picture--3 {
       background-image: linear-gradient(to right bottom, #CF9CB3, #8A586E), url(../img/covid19.jpg); }
+    .card__picture--4 {
+      background-image: linear-gradient(to right bottom, #C55456, #810F11), url(../img/pizza-hut.jpg); }
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -340,6 +346,8 @@ body {
       background-image: linear-gradient(to right bottom, rgba(90, 80, 98, 0.85), rgba(22, 11, 30, 0.85)); }
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(207, 156, 179, 0.85), rgba(138, 88, 110, 0.85)); }
+    .card__heading-span--4 {
+      background-image: linear-gradient(to right bottom, rgba(197, 84, 86, 0.85), rgba(129, 15, 17, 0.85)); }
   .card__details {
     padding: 3rem; }
     .card__details ul {
@@ -432,6 +440,7 @@ body {
   z-index: 9999;
   opacity: 0;
   visibility: hidden;
+  display: none;
   transition: all .3s; }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
@@ -443,7 +452,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 75%;
+    width: 90%;
     background-color: #fff;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     border-radius: 3px;
@@ -482,7 +491,8 @@ body {
     hyphens: auto; }
   .popup:target {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    display: block; }
   .popup:target .popup__content {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1); }
@@ -521,7 +531,7 @@ body {
     background-image: linear-gradient(to right bottom, #5A5062, #160B1E);
     color: white; }
   .popup__header-4 {
-    background-image: linear-gradient(to right bottom, #CF9CB3, #8A586E);
+    background-image: linear-gradient(to right bottom, #C55456, #810F11);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent; }
@@ -529,7 +539,7 @@ body {
       transform: skewX(2deg) skewY(1deg);
       text-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.2); }
   .popup__btn-4 {
-    background-image: linear-gradient(to right bottom, #CF9CB3, #8A586E);
+    background-image: linear-gradient(to right bottom, #C55456, #810F11);
     color: white; }
 
 /**
@@ -725,7 +735,7 @@ body {
     top: 4rem;
     left: 4rem; }
   .header__logo {
-    height: 4rem;
+    height: 5rem;
     filter: invert(67%) sepia(44%) saturate(331%) hue-rotate(356deg) brightness(88%) contrast(90%); }
   .header__text-box {
     position: absolute;

@@ -34,11 +34,11 @@
     }
 
     &--muddy {
-        background-color: $color-muddy;
+        background-color: $color-secondary;
         color: $color-white;
 
         &::after {
-            background-color: $color-muddy;
+            background-color: $color-secondary;
         }
     }
     
@@ -74,6 +74,8 @@
     }
     
     &--animated {
+        z-index: 1;
+        font-weight: 500;
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
     }

@@ -37,6 +37,10 @@
             &-3 {
                 background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
             }
+
+            &-4 {
+                background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark);
+            }
         }
     }
   
@@ -74,6 +78,11 @@
             background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
             url(../img/covid19.jpg);
         }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark), 
+            url(../img/pizza-hut.jpg);
+        }
     }
 
     &__heading {
@@ -110,6 +119,12 @@
             background-image: linear-gradient(to right bottom, 
             rgba($color-tertiary-light, .85), 
             rgba($color-tertiary-dark, .85));
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-quaternary-light, .85), 
+            rgba($color-quaternary-dark, .85));
         }
     }
 

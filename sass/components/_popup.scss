@@ -8,6 +8,7 @@
     z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    display: none;
     transition: all .3s;
 
     @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
@@ -19,7 +20,7 @@
     &__content {
         @include absCenter;
 
-        width: 75%;
+        width: 90%;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
@@ -73,6 +74,7 @@
     &:target {
         opacity: 1;
         visibility: visible;
+        display: block;
     }
 
     &:target &__content {
@@ -130,7 +132,7 @@
         color: white;
     }
     &__header-4 {
-        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+        background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -140,7 +142,7 @@
         }
     }
     &__btn-4 {
-        background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);    
+        background-image: linear-gradient(to right bottom, $color-quaternary-light, $color-quaternary-dark);    
         color: white;
     }
 }
